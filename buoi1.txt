@@ -1,0 +1,30 @@
+#include <bits/stdc++.h>
+using namespace std;
+class ps{
+	private:
+		int tu,mau;
+	public:
+	void nhap()
+	{
+		cout<<"Nhap tu so: ";cin>>tu;
+		cout<<"Nhap mau so: ";cin>>mau;
+		while(mau == 0)
+		{
+			cout<<"nhap lai mau so: ";
+			cin>>mau;
+			}
+	}
+	void xuat();
+};
+void ps::xuat()
+{
+	cout<<"                "<<tu<<endl;
+	cout<<" phan so do la: -"<<endl;
+	cout<<"                "<<mau<<endl;
+	}
+int main()
+{
+	ps a;
+	a.nhap();
+	a.xuat();
+	}
