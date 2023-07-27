@@ -19,17 +19,17 @@ class GV{
 			cout<<"Nhap ho ten cua giao vien: ";
 			cin.getline(HT, 30);
 			
-			cout<<"Nhap tuoi cua giao vien: ";
+			cout<<"Nhap tuoi: ";
 			cin>>Tuoi;
 			fflush(stdin);
 			
-			cout<<"Nhap bang cap cua giao vien: ";
+			cout<<"Nhap bang cap: ";
 			cin.getline(BC, 20);
 			
-			cout<<"Nhap chuyen nganh cua giao vien: ";
+			cout<<"Nhap chuyen nganh: ";
 			cin.getline(CN, 30);
 			
-			cout<<"Nhap bac luong cua giao vien: ";
+			cout<<"Nhap bac luong: ";
 			cin>>BL;
 			fflush(stdin);
 		}
@@ -37,7 +37,7 @@ class GV{
 			return this->BL * 610;
 		}
 		void Xuat(){
-			cout<<"Ho ten: "<<HT<<endl
+			cout<<"Ho ten cua giao vien: "<<HT<<endl
 				<<"Tuoi: "<<Tuoi<<endl
 				<<"Bang cap: "<<BC<<endl
 				<<"Chuyen nganh: "<<CN<<endl
@@ -48,14 +48,14 @@ class GV{
 void Nhap(GV gv[], int &n){
 	cout<<"========================NHAP THONG TIN GIAO VIEN===================="<<endl;
 	for(int i=0; i<n; i++){
-			cout<<"\nGiao vien thu "<<i+1<<": "<<endl;
+			cout<<"Giao vien thu "<<i+1<<": "<<endl;
 			gv[i].Nhap();
 		}
 }
 void Xuat(GV gv[], int n){
 	cout<<"====================Danh sach thong tin giao vien=================="<<endl;
 		for(int i=0; i<n; i++){
-			cout<<"\nGiao vien thu "<<i+1<<": "<<endl;
+			cout<<"Giao vien thu "<<i+1<<": "<<endl;
 			gv[i].Xuat();
 		}
 }
@@ -64,7 +64,7 @@ void Gvluongduoi2000(GV gv[], int n){
 	cout<<"=================Danh sach GV luong duoi 2000==============="<<endl;
 		for(int i=0; i<n; i++){
 			if(gv[i].TinhLCB() < 2000){
-				cout<<"\nGiao vien thu "<<i+1<<": "<<endl;
+				cout<<"Giao vien thu "<<i+1<<": "<<endl;
 				gv[i].Xuat();
 				count++;
 			}
@@ -92,5 +92,4 @@ int main(){
 Nhap(gv, n);
 Xuat(gv, n);
 Gvluongduoi2000(gv, n);
-	return 0;
 }
